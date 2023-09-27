@@ -11,21 +11,22 @@ function Invoke-Helm {
     helm @args
 }
 Set-Alias -Name h -Value Invoke-Helm
+Export-ModuleMember -Function Invoke-Helm -Alias h
 
 function Invoke-HelmInstall {
     helm install @args
 }
 Set-Alias -Name hin -Value Invoke-HelmInstall
+Export-ModuleMember -Function Invoke-HelmInstall -Alias hin
 
 function Invoke-HelmSearch {
     helm search @args
 }
 Set-Alias -Name hse -Value Invoke-HelmSearch
+Export-ModuleMember -Function Invoke-HelmSearch -Alias hse
 
 function Invoke-HelmUpgrade {
     helm upgrade @args
 }
 Set-Alias -Name hup -Value Invoke-HelmUpgrade
-
-
-Export-ModuleMember -Function * -Alias *
+Export-ModuleMember -Function Invoke-HelmUpgrade -Alias hup
